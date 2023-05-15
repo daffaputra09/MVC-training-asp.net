@@ -1,0 +1,181 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .card, .mostview{
+        transition: transform 0.2s ease-in-out;
+    }
+    .card:hover, .mostview:hover{
+        transform: scale(1.0125);
+    }
+/*    .side{
+        width: 500px;
+        position: fixed;
+        right:0;
+        background-color: white;
+    }*/
+
+</style>
+<main class="col-8">
+    <section class="d-flex justify-content-between ">
+        <div class="">
+            <h1 class="fs-2">Artikel Terbaru</h1>
+        </div>
+        <div class="w-50  row  justify-content-end">
+            <label for="SearchInput" class="col-sm-2 col-form-label my-auto">Search</label>
+            <div class="col-sm-10 w-50  my-auto">
+                <input type="text" class="form-control h-50 " id="SearchInput">
+            </div>
+        </div>
+    </section>
+    <section class="mt-4" role="article">
+        <article>
+            <a asp-controller="Article" asp-action="Article" style="text-decoration:none;">
+        <div class="card mb-4 text-black" >
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="~/img/blog1.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">How To Make You Happy When Coding</h5>
+                        <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada mi sodales metus scelerisque, consequat euismod dolor tincidunt. Vestibulum dignissim quis massa ac auctor. Nullam est nunc, sagittis sit amet gravida et, tincidunt vitae quam.  </p>
+                        <div class="card-text d-flex justify-content-between">
+                            <small class="text-muted">Daffa Putra</small>
+                            <small class="text-muted">8 October 2021</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+        </article>
+        <article>
+        <a href="" style="text-decoration:none;">
+            <div class="card mb-4 text-black">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/img/blog2.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">How To Die Before 40 Years Old</h5>
+                            <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada mi sodales metus scelerisque, consequat euismod dolor tincidunt. Vestibulum dignissim quis massa ac auctor. Nullam est nunc, sagittis sit amet gravida et, tincidunt vitae quam.  </p>
+                            <div class="card-text d-flex justify-content-between">
+                                <small class="text-muted">Daffa Putra</small>
+                                <small class="text-muted">8 October 2021</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        </article>
+        <article>
+        <a href="" style="text-decoration:none;">
+            <div class="card mb-4 text-black">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/img/blog3.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">How To Remove Background Using Figma</h5>
+                            <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada mi sodales metus scelerisque, consequat euismod dolor tincidunt. Vestibulum dignissim quis massa ac auctor. Nullam est nunc, sagittis sit amet gravida et, tincidunt vitae quam.  </p>
+                            <div class="card-text d-flex justify-content-between">
+                                <small class="text-muted">Daffa Putra</small>
+                                <small class="text-muted">09 July 2021</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        </article>
+    </section>
+</main>
+<aside class="side col">
+    <h3 class="text-center">Most Viewed Posts</h3>
+    <section class="mt-5">
+        <article class="w-75 mx-auto">
+            <a href="" style="text-decoration:none;">
+                <div class="mostview mb-4  text-black ">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="~/img/mostsql.png" style="width:130px" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-md-8 my-auto">
+                            <div class="card-body">
+                                <h6 class="card-title ">How To Save Your Money In SQL Server Manag...</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="w-75 mx-auto">
+        <a href="" style="text-decoration:none;">
+            <div class="mostview mb-4  text-black ">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/img/mostmoney.png" style="width:130px"  class="img-fluid rounded" alt="...">
+                    </div>
+                    <div class="col-md-8 my-auto">
+                        <div class="card-body">
+                            <h6 class="card-title ">Make Money From HVS Paper</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </article>
+        <article class="w-75 mx-auto">
+            <a href="" style="text-decoration:none;">
+                <div class="mostview mb-4  text-black ">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="~/img/mostchatgpt.png" style="width:130px" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-md-8 my-auto">
+                            <div class="card-body">
+                                <h6 class="card-title ">ChatGPT Can Be a Friend to Confide in</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="w-75 mx-auto">
+            <a href="" style="text-decoration:none;">
+                <div class="mostview mb-4  text-black ">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="~/img/mostpercentage.png" style="width:130px" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-md-8 my-auto">
+                            <div class="card-body">
+                                <h6 class="card-title ">This AI is for calculating the percentage of relationships</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="w-75 mx-auto">
+            <a href="" style="text-decoration:none;">
+                <div class="mostview mb-4  text-black ">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="~/img/mostmetaverse.png" style="width:130px" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-md-8 my-auto">
+                            <div class="card-body">
+                                <h6 class="card-title ">how to get married in the metaverse</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </article>
+    </section>
+</aside>
