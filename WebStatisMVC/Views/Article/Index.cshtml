@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebStatisMVC.Models.Articles>
+@{
+    ViewData["Title"] = "Article";
+}
+<style>
+    .mostview{
+        transition: transform 0.2s ease-in-out;
+    }
+    .mostview:hover{
+        transform: scale(1.0125);
+    }
+</style>
+<main class="">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publish Date</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model){
+            <tr>
+                <td>@item.title</td>
+                <td>@item.author</td>
+                <td>@item.publish_date</td>
+                <td>@item.category</td>
+                <td>
+                        <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</main>

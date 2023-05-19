@@ -8,14 +8,17 @@ namespace WebStatisMVC.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly MyDbContext _context;
+        public HomeController(ILogger<HomeController> logger, MyDbContext dbcontext)
         {
             _logger = logger;
+            _context = dbcontext;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var articles = _context.Articles.ToList();
+            return View(articles);
         }
         public IActionResult About()
         {
@@ -30,6 +33,7 @@ namespace WebStatisMVC.Controllers
         {
             return View();
         }
+
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

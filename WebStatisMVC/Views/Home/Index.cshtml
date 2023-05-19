@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<WebStatisMVC.Models.Articles>
+@{
     ViewData["Title"] = "Home Page";
 }
 <style>
@@ -16,6 +17,7 @@
     }*/
 
 </style>
+
 <main class="col-8">
     <section class="d-flex justify-content-between ">
         <div class="">
@@ -29,69 +31,30 @@
         </div>
     </section>
     <section class="mt-4" role="article">
-        <article>
-            <a asp-controller="Article" asp-action="Article" style="text-decoration:none;">
-        <div class="card mb-4 text-black" >
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="~/img/blog1.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title mb-4">How To Make You Happy When Coding</h5>
-                        <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada mi sodales metus scelerisque, consequat euismod dolor tincidunt. Vestibulum dignissim quis massa ac auctor. Nullam est nunc, sagittis sit amet gravida et, tincidunt vitae quam.  </p>
-                        <div class="card-text d-flex justify-content-between">
-                            <small class="text-muted">Daffa Putra</small>
-                            <small class="text-muted">8 October 2021</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-        </article>
-        <article>
-        <a href="" style="text-decoration:none;">
-            <div class="card mb-4 text-black">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="~/img/blog2.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title mb-4">How To Die Before 40 Years Old</h5>
-                            <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada mi sodales metus scelerisque, consequat euismod dolor tincidunt. Vestibulum dignissim quis massa ac auctor. Nullam est nunc, sagittis sit amet gravida et, tincidunt vitae quam.  </p>
-                            <div class="card-text d-flex justify-content-between">
-                                <small class="text-muted">Daffa Putra</small>
-                                <small class="text-muted">8 October 2021</small>
+        @foreach (var item in Model)
+            {
+                <article>
+                    <a asp-action="Details" asp-controller="Article" asp-route-id="@item.id" style="text-decoration:none;">
+                        <div class="card mb-4 text-black" >
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                <img src="~/img/@item.featured_image" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4">@item.title</h5>
+                                        <p class="card-text mb-4">@item.excerpt</p>
+                                        <div class="card-text d-flex justify-content-between">
+                                            <small class="text-muted">@item.author</small>
+                                            <small class="text-muted">@item.publish_date.ToString("dd/MM/yyyy")</small>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        </article>
-        <article>
-        <a href="" style="text-decoration:none;">
-            <div class="card mb-4 text-black">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="~/img/blog3.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title mb-4">How To Remove Background Using Figma</h5>
-                            <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada mi sodales metus scelerisque, consequat euismod dolor tincidunt. Vestibulum dignissim quis massa ac auctor. Nullam est nunc, sagittis sit amet gravida et, tincidunt vitae quam.  </p>
-                            <div class="card-text d-flex justify-content-between">
-                                <small class="text-muted">Daffa Putra</small>
-                                <small class="text-muted">09 July 2021</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        </article>
+                    </a>
+                </article>
+            }  
     </section>
 </main>
 <aside class="side col">
