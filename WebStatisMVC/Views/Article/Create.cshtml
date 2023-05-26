@@ -1,0 +1,52 @@
+﻿@model WebStatisMVC.Models.Articles
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Articles</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype = "multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label for="title">Judul</label>
+                <input type="text" name="title" id="title" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="description">Deskripsi</label>
+                <textarea name="description" id="description" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="excerpt">Kutipan</label>
+                <textarea name="excerpt" id="excerpt" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="featuredImage">Gambar Utama</label>
+                <input type="file" name="featuredImage" id="featuredImage" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="author">Penulis</label>
+                <input type="text" name="author" id="author" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="time_read">Waktu Baca</label>
+                <input type="number" name="time_read" id="time_read" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="category">Kategori</label>
+                <input type="text" name="category" id="category" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Unggah</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

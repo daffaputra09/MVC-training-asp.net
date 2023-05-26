@@ -12,6 +12,7 @@
                 <img src="~/img/@Html.DisplayFor(model => model.featured_image)" class="figure-img img-fluid rounded" alt="...">
                 <div class="card-text d-flex justify-content-between">
                     <figcaption class="figure-caption" itemprop="author">@Html.DisplayFor(model => model.author)</figcaption>
+                    <figcaption class="figure-caption" itemprop="timeRequired">@Html.DisplayFor(model => model.time_read) mins</figcaption>
                     <figcaption class="figure-caption" itemprop="datePublished">@Html.DisplayFor(model => model.publish_date)</figcaption>
                 </div>
             </figure>

@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\cs\\WebStatisMVC\\WebStatisMVC\\wwwroot\\img\\Screenshot 2023-03-08 083223.png",
+      "PackagePath": "staticwebassets\\img\\Screenshot 2023-03-08 083223.png"
+    },
+    {
+      "Id": "D:\\cs\\WebStatisMVC\\WebStatisMVC\\wwwroot\\img\\Screenshot 2023-03-24 144816.png",
+      "PackagePath": "staticwebassets\\img\\Screenshot 2023-03-24 144816.png"
+    },
+    {
+      "Id": "D:\\cs\\WebStatisMVC\\WebStatisMVC\\wwwroot\\img\\Screenshot 2023-03-31 103241.png",
+      "PackagePath": "staticwebassets\\img\\Screenshot 2023-03-31 103241.png"
+    },
+    {
       "Id": "D:\\cs\\WebStatisMVC\\WebStatisMVC\\wwwroot\\img\\blog1.png",
       "PackagePath": "staticwebassets\\img\\blog1.png"
     },
